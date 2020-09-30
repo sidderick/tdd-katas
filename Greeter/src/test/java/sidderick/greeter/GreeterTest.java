@@ -8,17 +8,17 @@ class GreeterTest {
 
 
     @Test
-    void shouldGreetMe(){
+    void shouldGreetMe() {
         assertEquals("Hello Bob", new Greeter().greet("Bob"));
     }
 
     @Test
-    void shouldTrim(){
+    void shouldTrim() {
         assertEquals("Hello Bob", new Greeter().greet(" Bob "));
     }
 
     @Test
-    void shouldCapitaliseFirst(){
+    void shouldCapitaliseFirst() {
         assertEquals("Hello Bob", new Greeter().greet("bob"));
     }
 
