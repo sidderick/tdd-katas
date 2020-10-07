@@ -25,12 +25,19 @@ class StringCalculatorTest {
 
     @Test
     public void shouldAddThroughNewLine() {
-        assertEquals(3, StringCalculator.add("1\n2"));
+        assertEquals(10, StringCalculator.add("7\n3"));
     }
 
     @Test
     public void shouldAddThroughAnyDelimiter() {
         assertEquals(10,StringCalculator.add("1\n2,3\n4"));
+    }
+
+
+    @Test
+    public void shouldExpectException() {
+        Throwable exception = assertThrows(IllegalStateException.class, () -> StringCalculator.add("-1"));
+        assertEquals("Negative numbers not allowed: -1", exception.getMessage());
     }
 
 }
